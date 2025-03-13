@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio
+networks:
+- id: 11155111
+  start_block: 0
+  contracts:
+  - name: Pip
+    address:
+    - 0x33891a35faE6D861B5F33a13083b1854eCdFF406
+    - 0x726664D035D8e3a56d832c39FbB66cB3cd509fF0
+    - 0x3399a386F1D449a2580263C3F74417a3D5F4b538
+    - 0xb4068cd460362f071bE94caE555e9ccb425eeA5f
+    handler: src/EventHandlers.ts
+    events:
+    - event: Deposit(bytes32 indexed leaf, uint256 indexed _leafIndex, uint256 indexed _treeIndex, bytes32 root)

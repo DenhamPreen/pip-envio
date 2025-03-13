@@ -1,0 +1,8 @@
+type Pip_Deposit {
+  id: ID!
+  leaf: String!
+  _leafIndex: BigInt!
+  _treeIndex: BigInt!
+  root: String!
+}
+
