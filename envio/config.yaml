@@ -1,15 +1,38 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
-name: envio
-networks:
-- id: 11155111
-  start_block: 0
-  contracts:
-  - name: Pip
-    address:
-    - 0x33891a35faE6D861B5F33a13083b1854eCdFF406
-    - 0x726664D035D8e3a56d832c39FbB66cB3cd509fF0
-    - 0x3399a386F1D449a2580263C3F74417a3D5F4b538
-    - 0xb4068cd460362f071bE94caE555e9ccb425eeA5f
-    handler: src/EventHandlers.ts
-    events:
-    - event: Deposit(bytes32 indexed leaf, uint256 indexed _leafIndex, uint256 indexed _treeIndex, bytes32 root)
+ name: envio
+ networks:
+ - id: 369
+   start_block: 23024900
+   rpc: 
+     - url: https://rpc.pulsechain.com
+       for: sync
+     - url: https://pulsechain-rpc.publicnode.com
+       for: sync
+     - url: https://rpc-pulsechain.g4mm4.io
+       for: sync
+   contracts:
+   - name: Pip
+     address:
+     - 0x9a5c4290C3c768a41afac7306D05Fe4B32E7D93a
+     - 0xa971ebFe43A1059B3A582D408fa121355AF4607d
+     - 0xa112f4Fa5ed7165085ADd3E1BC9940C16334BCB8
+     - 0x1509346DDE8165cBb8deCD5e543DDb58dC49226d
+     - 0x85Ab43d7bb796EAC93c4b5881E43C024E8E62B98
+     - 0xA08218D6518768c4c5CC4E3CB1260776e9b9E90e
+     - 0xAa69e8DDa0863B1417C13eB111180A4E362f4E74
+     - 0xd197C487e39a5A5B3f48beDc78a3A403506E0D99
+     - 0xCdc57Ef5EF322Dc0c16Bc5DDCD10a2a2c6dF52C1
+     - 0x95D97bCFa1C8CcA8D6851D2BB08D305e47761EF4
+     - 0xD722D90d90A64f71F9081A74F41f4774cd696296
+     - 0x4d6B1f2562e05c28f8834e9fE3b3F6f0748d9da0
+     - 0x96Fa3aE8A796E1c241cf085ED5557116d9945898
+     - 0x3b88781b606b695452B6C1C6ffdbb08C34Ab5B54
+     - 0x8bc0f3FcAb265c15e8a06202F42002402D895791
+     - 0x2Ac4da0Db6E7ad80d283BC17128A81067F38e05d
+     - 0xac95F7500AA1f97edfC11eDcE5Ad68bCe83891A9
+     - 0x6FF1f60Ff4e43Ee26E2B28450a620f0524e332d8
+     - 0xe95029A0Be21e56401d76eA809F5a0aD58AdB723
+     - 0xbCEc9e6910C6Cd9cb2f9da1961965e9635719632
+     handler: src/EventHandlers.ts
+     events:
+     - event: Deposit(bytes32 indexed leaf, uint256 indexed _leafIndex, uint256 indexed _treeIndex, bytes32 root)
